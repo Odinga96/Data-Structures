@@ -33,10 +33,14 @@ public class DynamicArray<T> implements Iterable<T>{
     }
 
     public T get(int index) {
+        if (index >= array.length )
+            throw new IndexOutOfBoundsException("Invalid index");
         return array[index];
     }
 
     public void set(int index, T element){
+        if (index >= array.length )
+            throw new IndexOutOfBoundsException("Invalid index");
         array[index] = element;
     }
 
